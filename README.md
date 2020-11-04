@@ -1,2 +1,2 @@
 # firebase_push_notification
-Sample of receiving push notifications
+An app that just receives push notifications from Firebase
