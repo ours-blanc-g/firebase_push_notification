@@ -54,7 +54,7 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
     super.initState();
     _messages = List<Message>();
     _getToken();
-    _configFirebaseListeners();
+    _configureFirebaseListeners();
   }
 
   @override
