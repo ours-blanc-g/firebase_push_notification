@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'RcvFirebaseMessaging.dart';
 
 void main() => runApp(MainApp());
 

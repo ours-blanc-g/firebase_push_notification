@@ -44,8 +44,8 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
     final String body = notification['body'];
     final String mMessage = data[message];
     setState(() {
-      Message push_message = Message(title, body, mMessage);
-      _messages.add(push_message);
+      Message pushMessage = Message(title, body, mMessage);
+      _messages.add(pushMessage);
     });
   }
 
@@ -70,7 +70,9 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
             child: Padding(
               padding: EdgeInsets.all(15.0),
               child: Text(
-                _messages[index].message,
+                _messages[index].message != null
+                    ? _messages
+                    : 'reception complete!!',
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.blue,
