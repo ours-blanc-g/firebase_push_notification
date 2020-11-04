@@ -20,7 +20,7 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
         .then((deviceToken) => print('Device Token: $deviceToken'));
   }
 
-  _configFirebaseListeners() {
+  _configureFirebaseListeners() {
     _firebaseMessaging.configure(
       onMessage: (Map<String, dynamic> message) async {
         print("onMessage: $message");
