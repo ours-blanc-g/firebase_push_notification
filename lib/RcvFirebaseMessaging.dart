@@ -20,7 +20,7 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
         .then((deviceToken) => print('Device Token: $deviceToken'));
   }
 
-  _configureFirebaseListeners() {
+  _configFirebaseListeners() {
     _firebaseMessaging.configure(
       onMessage: (Map<String, dynamic> message) async {
         print("onMessage: $message");
@@ -54,7 +54,7 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
     super.initState();
     _messages = List<Message>();
     _getToken();
-    _configureFirebaseListeners();
+    _configFirebaseListeners();
   }
 
   @override
@@ -71,7 +71,7 @@ class _RcvFirebaseMessagingState extends State<RcvFirebaseMessaging> {
               padding: EdgeInsets.all(15.0),
               child: Text(
                 _messages[index].message != null
-                    ? _messages
+                    ? _messages[index].message
                     : 'reception complete!!',
                 style: TextStyle(
                   fontSize: 20.0,
